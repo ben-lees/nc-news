@@ -3,6 +3,8 @@ import { Button } from "./Button";
 import "../App.css";
 import "./Hero.css";
 
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <div className="hero-container">
@@ -10,11 +12,15 @@ function Hero() {
       <h1>Welcome to NC News</h1>
       <p>Only the coolest and most exclusive stories on the interwebs</p>
       <div className="hero-btns">
-        <Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
-          Find a topic!
+        <Button>
+          <Link to="/topics" className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
+            Find a topic!
+          </Link>
         </Button>
         <Button className="btns" buttonStyle="btn--primary" buttonSize="btn--large">
-          Find an article!
+          <Link to="/articles" className="btns" buttonStyle="btn--outline" buttonSize="btn--large">
+            Find an article!
+          </Link>
         </Button>
       </div>
     </div>

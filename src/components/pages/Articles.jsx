@@ -19,18 +19,22 @@ function Articles() {
           <ul>
             {articles.map((article) => {
               return (
-                <div className="article">
-                  <li key={article.article_id}>
-                    <span>{article.title}</span>
-                    <br />
-                    <span>
-                      Posted by user: {article.author} on {article.created_at}
-                    </span>
-                    <br />
-                    <span>Topic: {article.topic} </span>
-                    <br />
-                    <span className="article-body">{article.body} </span>
-                  </li>
+                <div className="article" key={article.article_id}>
+                  <span>{article.title}</span>
+                  <br />
+                  <span>
+                    Posted by user: {article.author} on {article.created_at}
+                  </span>
+                  <br />
+                  <span>Topic: {article.topic} </span>
+                  <br />
+                  <span className="article-body">{article.body} </span>
+                  <div>
+                    <ul>
+                      <span>Comments - {article.comments}</span>
+                      <span>{article.votes} </span>
+                    </ul>
+                  </div>
                 </div>
               );
             })}
