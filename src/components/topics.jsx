@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./topics.css";
 
 function Topics() {
   const [topics, setTopics] = useState([]);
@@ -8,11 +9,11 @@ function Topics() {
       setTopics(res.data.topics);
     });
   }, []);
-  console.log(topics);
+  // console.log(topics);
   return (
-    <div>
+    <div className="topics-page">
       <main>
-        <h1>TOPICS</h1>
+        <h1 className="topics-head">TOPICS</h1>
         <section>
           <ul>
             {topics.map((topic) => {

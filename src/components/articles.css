@@ -1,0 +1,16 @@
+.article {
+    margin: 10px;
+    padding: 40;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.article-head {
+    text-align: center;
+    margin: 10px;
+}
+
+.article-body {
+    margin: 30px;
+    padding: 1rem;
+}
