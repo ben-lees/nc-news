@@ -28,7 +28,7 @@ function NavBar() {
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+          <Link to="/home" className="navbar-logo" onClick={closeMobileMenu}>
             NC NEWS <i className="fab fa-typo3" />
           </Link>
 
@@ -37,22 +37,26 @@ function NavBar() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/home" className="nav-links" onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/topics" className="nav-links" onClick={closeMobileMenu}>
                 Topics
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/articles" className="nav-links" onClick={closeMobileMenu}>
                 Articles
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline"> Sign in </Button>}
+          {button && (
+            <Button to="sign-in" buttonStyle="btn--outline">
+              Sign in
+            </Button>
+          )}
         </div>
       </nav>
     </>
