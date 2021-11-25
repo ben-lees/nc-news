@@ -1,16 +1,26 @@
 .article {
     margin: 10px;
-    padding: 40;
+    padding: 40px;
     border: 2px solid black;
+    border-radius: 15px;
     text-align: center;
+    background-color: blanchedalmond;
 }
 
 .article-head {
     text-align: center;
-    margin: 10px;
+    margin: 40px;
 }
 
 .article-body {
     margin: 30px;
     padding: 1rem;
+}
+
+.article-card {
+    border: black solid 2px;
+    border-radius: 30px;
+    margin: 2rem;
+    padding: 10px;
+    background-color: rgb(152, 57, 28);
 }
