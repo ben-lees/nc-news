@@ -5,6 +5,7 @@ import "./Article.css";
 import { UserContext } from "../../contexts/UserContext";
 import Upvote from "../LikeButtonComponent";
 import LikeButton from "../LikeButton";
+import Comments from "../Comments";
 
 function Article() {
   const [article, setArticle] = useState({});
@@ -28,7 +29,9 @@ function Article() {
           <p>Posted in r/{article.topic}</p>
           <p>by user u/{article.author}</p>
           <p className="p-article">{article.body}</p>
-          <p>Comments: {article.comment_count}</p>
+          <p>
+            <Comments article_id={article_id} />
+          </p>
           <p>
             Upvotes: {article.votes}
             <button>

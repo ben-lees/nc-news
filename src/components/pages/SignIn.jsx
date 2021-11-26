@@ -1,16 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 // import axios from "axios";
 import { UserContext } from "../../contexts/UserContext";
 import { login } from "./userlogin";
+import { getUsers } from "../../utils/getUsers";
 
 function SignIn() {
-  // useEffect(() => {
-  //   axios.get("https://nc-news-working.herokuapp.com/api/users").then((res) => {
-  //     setUser(res.data.users);
-  //   });
-  // }, []);
-
   const { user, setUser } = useContext(UserContext);
+  useEffect(() => {
+    getUsers().then((res) => {
+      setUser(res.data.users);
+    });
+  }, []);
+  //map username string for user
+  //pass username in to url
+  console.log(user);
 
   return (
     <div>
