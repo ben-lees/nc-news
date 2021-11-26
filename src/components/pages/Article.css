@@ -1,0 +1,18 @@
+.single-article {
+    margin: 3rem;
+    padding: 2rem;
+    border: 3px solid black;
+    border-radius: 15px;
+    text-align: center;
+    background-color: blanchedalmond;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.article-title {
+    margin: 1.5rem;
+    font-size: 2rem;
+}
+
+.p-article {
+    margin: 20px;
+}

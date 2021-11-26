@@ -24,17 +24,14 @@ function Articles() {
                   <li key={article.article_id}>
                     <Link to={`/articles/${article.article_id}`}> {article.title}</Link>
                   </li>
-
                   <li>
                     Posted by user: {article.author} on {article.created_at}
                   </li>
-
                   <li>Topic: {article.topic} </li>
-
-                  <li className="article-body">{article.body} </li>
+                  {/* <li className="article-body">{article.body} </li> */}
                   <div>
                     <ul>
-                      <li>Comments - {article.comments}</li>
+                      <li>Comments - {article.comment_count}</li>
 
                       <li>Upvotes - {article.votes} </li>
                     </ul>
