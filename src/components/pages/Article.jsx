@@ -3,9 +3,8 @@ import { useParams } from "react-router";
 import axios from "axios";
 import "./Article.css";
 import { UserContext } from "../../contexts/UserContext";
-import Upvote from "../LikeButtonComponent";
-import LikeButton from "../LikeButton";
 import Comments from "../Comments";
+import SubmitComment from "../submitComment";
 
 function Article() {
   const [article, setArticle] = useState({});
@@ -33,11 +32,9 @@ function Article() {
             <Comments article_id={article_id} />
           </p>
           <p>
-            Upvotes: {article.votes}
-            <button>
-              <LikeButton />
-            </button>
+            <SubmitComment />
           </p>
+          <p>Upvotes: {article.votes}</p>
           <pre>{JSON.stringify(user, null, 2)}</pre>
         </div>
       </section>

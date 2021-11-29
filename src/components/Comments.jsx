@@ -2,15 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { getComments } from "../utils/api";
 import LikeButton from "./LikeButton";
 
-// import { UserContext } from "../contexts/UserContext";
+import { UserContext } from "../contexts/UserContext";
 
 const Comments = ({ article_id }) => {
   const [comments, setComments] = useState([]);
 
-  //   const { user } = useContext(UserContext);
+  const { user } = useContext(UserContext);
 
   useEffect(() => {
-    console.log("hellooo");
     getComments(article_id)
       .then((comments) => {
         setComments(comments);
@@ -32,14 +31,14 @@ const Comments = ({ article_id }) => {
 
               <p>
                 Upvotes:
-                <b>{comment.votes}</b>{" "}
-                <button>
-                  <LikeButton />
-                </button>
+                <b>{comment.votes}</b>
               </p>
             </li>
           );
         })}
+        <button>
+          <LikeButton />
+        </button>
       </section>
     </div>
   );
